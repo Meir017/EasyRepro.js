@@ -5,12 +5,8 @@ import * as constants from './constants';
 import { ElementHandle, Page } from 'playwright';
 import { clickIfVisible, hasElements, waitForTransaction, waitUntilAvailable } from './playwright-extensions';
 import { Elements, Reference } from './element-reference';
-
-enum LoginResult {
-    Success,
-    Failure,
-    Redirect
-}
+import { AppElements, AppReference, LoginResult } from './app-element-reference';
+import { WebDriver } from './abstraction';
 
 export class WebClient extends BrowserPage {
 
@@ -67,6 +63,8 @@ export class WebClient extends BrowserPage {
         });
     }
 
+    //@region PageWaits
+
     async waitForMainPage(timeout: number | undefined = undefined, successCallback: (element: ElementHandle) => Promise<void> = undefined, failureCallback = undefined) {
         timeout = timeout ?? constants.defaultTimeout;
         successCallback = successCallback ?? (
@@ -80,6 +78,10 @@ export class WebClient extends BrowserPage {
         var element = await waitUntilAvailable(this.page, xpathToMainPage, timeout, successCallback, failureCallback);
         return element != null;
     }
+
+    //#endregion
+
+    //#region Login
 
     public async login(orgUri: string, username: string, password: string, mfaSecretKey: string): Promise<BrowserCommandResult<LoginResult>> {
         return this.execute(this.getOptions('Login'), async (driver, orgUri, username, password, mfaSecretKey) => {
@@ -218,6 +220,8 @@ export class WebClient extends BrowserPage {
         var element = await clickIfVisible(page, xpath, 5 * 1000);
         return element != null;
     }
+
+    //#endregion
 
     private thinkTime(milliseconds: number) {
         return this.browser.thinkTime(milliseconds);
