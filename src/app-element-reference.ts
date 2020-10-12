@@ -283,7 +283,7 @@ export const AppReference = {
     }
 }
 
-export const AppElements = {
+export const AppElements: { Xpath: Record<string, string> } = {
     Xpath: {
         //Application 
         "App_Shell": "//*[@id=\"ApplicationShell\"]",
