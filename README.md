@@ -1,5 +1,7 @@
 # EasyRepro.js
 
+![badge](https://action-badges.now.sh/Meir017/EasyRepro.js)
+
 port of [EasyRepro](https://github.com/microsoft/EasyRepro/) using [🎭 Playwright](https://github.com/microsoft/playwright)
 
 ## Overview
