@@ -1,6 +1,7 @@
 # EasyRepro.js
 
-![badge](https://action-badges.now.sh/Meir017/EasyRepro.js)
+[![Actions Status](https://github.com/Meir017/EasyRepro.js/workflows/Build/badge.svg)](https://github.com/Meir017/EasyRepro.js/actions)
+
 
 port of [EasyRepro](https://github.com/microsoft/EasyRepro/) using [🎭 Playwright](https://github.com/microsoft/playwright)
 
