@@ -1,4 +1,4 @@
-import { Browser, BrowserContext, Page } from "playwright";
+import { Browser, BrowserContext, Page } from '@playwright/test';
 
 export interface WebDriver {
     browser: Browser;
