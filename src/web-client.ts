@@ -2,7 +2,7 @@ import { BrowserPage } from './browser-page';
 import { BrowserCommandOptions, BrowserCommandResult } from './commands';
 import { BrowserOptions, InteractiveBrowser } from './interactive-browser';
 import * as constants from './constants';
-import { ElementHandle, Page } from 'playwright';
+import { ElementHandle, Page } from '@playwright/test';
 import { clickIfVisible, hasElements, waitForTransaction, waitUntilAvailable, waitUntilVisible, clickWhenAvailable, waitUntilClickable, waitForPageToLoad, isVisible } from './playwright-extensions';
 import { Elements, Reference } from './element-reference';
 import { AppElements, AppReference, LoginResult } from './app-element-reference';

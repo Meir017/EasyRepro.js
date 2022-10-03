@@ -1,4 +1,4 @@
-import { ElementHandle, Frame, Page } from 'playwright';
+import { ElementHandle, Frame, Page } from '@playwright/test';
 import * as constants from './constants';
 import { InvalidOperationError } from './errors';
 

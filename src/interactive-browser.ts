@@ -1,4 +1,4 @@
-import { Browser, BrowserContext, Page } from "playwright";
+import { Browser, BrowserContext, Page } from '@playwright/test';
 import { BrowserPage } from "./browser-page";
 import { CommandResult } from "./commands";
 import * as constants from "./constants";

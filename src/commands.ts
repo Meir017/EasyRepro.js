@@ -1,4 +1,3 @@
-import { Browser } from "playwright";
 import * as constants from './constants';
 import { WebDriver } from './abstraction';
 
@@ -24,6 +23,7 @@ export interface CommandResult {
 
     depth: number;
 }
+
 
 export class BrowserCommandResult<TReturn> implements CommandResult {
 
